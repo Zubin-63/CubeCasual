@@ -9,7 +9,7 @@ public class PlatformSpawnerScript : MonoBehaviour
     public GameObject spikePlatformPrefab;
     public GameObject breakPlatformPrefab;
     public GameObject[] movingPlatformPrefab;
-    public float platformSpawnTimer = 1.8f;
+    public float platformSpawnTimer = 1.5f;
     private float currentPlatformSpawnTimer;
     private int countPlatform;
 

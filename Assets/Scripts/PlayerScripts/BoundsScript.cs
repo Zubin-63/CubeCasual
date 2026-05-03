@@ -30,10 +30,23 @@ public class BoundsScript : MonoBehaviour
             if (!isOutOfBounds)
             {
                 isOutOfBounds = true;
+                SoundManagerScript.instance.DeathSound();
+                GameManagerScript.instance.RestartGame();
                 // sound of death
                 // gamemanager restart game 
             }
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        if (target.gameObject.tag == "Spikes")
+        {
+            Destroy(gameObject);
+            SoundManagerScript.instance.DeathSound();
+            GameManagerScript.instance.RestartGame();
+            SoundManagerScript.instance.DeathSound();
+            GameManagerScript.instance.RestartGame();
+        }
     }
 }
